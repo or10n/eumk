@@ -46,7 +46,7 @@ return array(
 		),
 		*/
 		'db'=>array(
-			'connectionString' => 'mysql:host-localhost;dbname=blog',
+			'connectionString' => 'mysql:host=localhost;dbname=eumk',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
