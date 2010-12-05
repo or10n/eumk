@@ -6,7 +6,6 @@
  * The followings are the available columns in table '{{article}}':
  * @property integer $id
  * @property integer $content_id
- * @property string $title
  * @property string $text
  *
  * The followings are the available model relations:
@@ -39,13 +38,12 @@ class Article extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('content_id, title, text', 'required'),
+			array('content_id', 'required'),
 			array('content_id', 'numerical', 'integerOnly'=>true),
-			array('title', 'length', 'max'=>250),
 			array('text', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, content_id, title, text', 'safe', 'on'=>'search'),
+			array('id, content_id, text', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,7 +67,6 @@ class Article extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'content_id' => 'Content',
-			'title' => 'Title',
 			'text' => 'Text',
 		);
 	}
@@ -87,7 +84,6 @@ class Article extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('content_id',$this->content_id);
-		$criteria->compare('title',$this->title,true);
 		$criteria->compare('text',$this->text,true);
 
 		return new CActiveDataProvider(get_class($this), array(

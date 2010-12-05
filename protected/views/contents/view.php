@@ -1,7 +1,7 @@
 <?php
 $this->breadcrumbs=array(
 	'Contents'=>array('index'),
-	$model->id,
+	$model->title,
 );
 
 $this->menu=array(
@@ -21,5 +21,6 @@ $this->menu=array(
 		'id',
 		'parent',
 		'position',
+		'title',
 	),
 )); ?>

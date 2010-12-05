@@ -12,5 +12,9 @@
 	<?php echo CHtml::encode($data->position); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('title')); ?>:</b>
+	<?php echo CHtml::encode($data->title); ?>
+	<br />
+
 
 </div>
