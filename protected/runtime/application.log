@@ -859,3 +859,155 @@ REQUEST_URI=/index.php?r=article/create
 in /home/ori/www/eumk/htdocs/protected/views/article/_form.php (57)
 in /home/ori/www/eumk/htdocs/protected/views/article/create.php (15)
 in /home/ori/www/eumk/htdocs/protected/controllers/ArticleController.php (78)
+2010/12/05 18:13:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php?r=contents".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('index.php?r=con...')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('index.php?r=con...')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/index.php?...')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/index.php?r=contents
+2010/12/05 18:13:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php?r=contents".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('index.php?r=con...')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('index.php?r=con...')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/index.php?...')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/index.php?r=contents
+2010/12/05 18:13:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "r=contents".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('r=contents')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('r=contents')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/r=contents')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/r=contents
+2010/12/05 18:14:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "r=contents".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('r=contents')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('r=contents')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/r=contents')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/r=contents
+2010/12/05 18:14:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "r=contents".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('r=contents')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('r=contents')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/r=contents')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/r=contents
+2010/12/05 18:14:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php?r=article".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('index.php?r=art...')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('index.php?r=art...')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/index.php?...')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/index.php?r=article
+2010/12/05 18:14:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "r=contents".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('r=contents')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('r=contents')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/r=contents')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/r=contents
+2010/12/05 18:16:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "r=contents".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('r=contents')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('r=contents')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/r=contents')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/r=contents
+2010/12/05 18:16:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "article".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('article')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('article')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/article')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/article
+2010/12/05 18:16:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "article".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('article')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('article')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/article')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/article
+2010/12/05 18:16:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contents".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('contents')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('contents')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/contents')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/contents
+2010/12/05 18:16:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "article".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('article')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('article')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/article')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/article
+2010/12/05 18:16:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contents".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('contents')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('contents')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/contents')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/contents
+2010/12/05 18:16:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "article".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('article')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('article')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/article')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/article
+2010/12/05 18:16:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "article".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('article')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('article')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/article')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/article
+2010/12/05 18:17:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "article".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('article')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('article')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/article')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/article
+2010/12/05 18:17:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contents".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('contents')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('contents')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/contents')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/contents
+2010/12/05 18:17:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "article".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('article')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('article')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/article')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/article
+2010/12/05 18:17:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "article".' in /home/ori/www/eumk/yii/framework/web/CController.php:444
+Stack trace:
+#0 /home/ori/www/eumk/yii/framework/web/CController.php(262): CController->missingAction('article')
+#1 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('article')
+#2 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/article')
+#3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=site/article
