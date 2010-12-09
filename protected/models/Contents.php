@@ -6,11 +6,13 @@
  * The followings are the available columns in table '{{contents}}':
  * @property integer $id
  * @property integer $parent
+ * @property integer $type_id
  * @property integer $position
  * @property string $title
  *
  * The followings are the available model relations:
  * @property Article[] $articles
+ * @property Type $type
  */
 class Contents extends CActiveRecord
 {
@@ -39,12 +41,12 @@ class Contents extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title', 'required'),
-			array('parent, position', 'numerical', 'integerOnly'=>true),
+			array('type_id, title', 'required'),
+			array('parent, type_id, position', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>250),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, parent, position, title', 'safe', 'on'=>'search'),
+			array('id, parent, type_id, position, title', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,6 +59,7 @@ class Contents extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'articles' => array(self::HAS_MANY, 'Article', 'content_id'),
+			'type' => array(self::BELONGS_TO, 'Type', 'type_id'),
 		);
 	}
 
@@ -68,6 +71,7 @@ class Contents extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'parent' => 'Parent',
+			'type_id' => 'Type',
 			'position' => 'Position',
 			'title' => 'Title',
 		);
@@ -86,6 +90,7 @@ class Contents extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('parent',$this->parent);
+		$criteria->compare('type_id',$this->type_id);
 		$criteria->compare('position',$this->position);
 		$criteria->compare('title',$this->title,true);
 

@@ -173,4 +173,49 @@ class ArticleController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+  /**
+   * create tree
+   * 
+   * $input == $parents
+   */
+   public function getTree($input)
+   {
+    
+
+    global $last;
+    global $titles;
+    global $list;
+
+    $pref = '';
+    foreach($input as $key=>$value){
+        if(@!$last[$key]){
+          @$list[$key] = "{$titles[$key]}";
+          $this->tree($input,$key,$pref,$list);
+        }
+    }     
+     
+    return $list; 
+     
+   }
+   
+   private function tree($input,$parent,$pref,$list)
+   {
+     
+      global $last;
+      global $list;
+
+      if($parent != 0){
+      $dir = $pref . ' *';
+      $last[$parent] = 1;
+
+      foreach($input as $key=>$value){
+        if($value == $parent){
+          $list[$key] = "$dir " . @$titles[$key];
+          $this->tree($input,$key,$pref. ' *',$list);
+        }
+      }
+      }     
+     
+   }
 }
