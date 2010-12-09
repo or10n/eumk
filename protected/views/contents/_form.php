@@ -11,8 +11,27 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'parent'); ?>
-		<?php echo $form->textField($model,'parent'); ?>
+		
+		<?php 
+		
+  		$parents = CHtml::listData(Contents::model()->findAll(), 'id','parent');
+      
+      $list = $this->getTree($parents);
+  
+      foreach(CHtml::listData(Contents::model()->findAll(), 'id','title') as $key=>$value){
+        $list[$key] = $list[$key] . ' ' . $value;
+      }
+      echo $form->dropDownList($model,'parent', $list ); 
+      
+    ?>
+    
 		<?php echo $form->error($model,'parent'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'type_id'); ?>
+		<?php echo $form->dropDownList($model,'type_id', CHtml::listData(Type::model()->findAll(), 'id','type') ); ?>
+		<?php echo $form->error($model,'type_id'); ?>
 	</div>
 
 	<div class="row">
@@ -21,11 +40,11 @@
 		<?php echo $form->error($model,'position'); ?>
 	</div>
 
-  <div class="row">
-    <?php echo $form->labelEx($model,'title'); ?>
-    <?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=> 50)); ?>
-    <?php echo $form->error($model,'title'); ?>
-  </div>
+	<div class="row">
+		<?php echo $form->labelEx($model,'title'); ?>
+		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>250)); ?>
+		<?php echo $form->error($model,'title'); ?>
+	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

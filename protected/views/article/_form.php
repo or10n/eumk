@@ -36,10 +36,9 @@ tinyMCE.init({
 		<?php echo $form->labelEx($model,'content_id'); ?>
 
 		<?php
-    // это быдло код. сюда лучше не смотреть :(
-    $titles = CHtml::listData(Contents::model()->findAll(), 'id','title');
+ 
     $parents = CHtml::listData(Contents::model()->findAll(), 'id','parent');
-
+    
     $list = $this->getTree($parents);
 
     foreach(CHtml::listData(Contents::model()->findAll(), 'id','title') as $key=>$value){
@@ -48,7 +47,7 @@ tinyMCE.init({
 		echo $form->dropDownList($model,'content_id', $list );
 
 		?>
-
+    
 		<?php echo $form->error($model,'content_id'); ?>
 	</div>
 

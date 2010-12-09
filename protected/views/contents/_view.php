@@ -8,6 +8,10 @@
 	<?php echo CHtml::encode($data->parent); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('type_id')); ?>:</b>
+	<?php echo CHtml::encode($data->type_id); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('position')); ?>:</b>
 	<?php echo CHtml::encode($data->position); ?>
 	<br />
