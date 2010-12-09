@@ -1011,3 +1011,11 @@ Stack trace:
 #3 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
 #4 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
 #5 {main} REQUEST_URI=/index.php?r=site/article
+2010/12/09 21:00:45 [error] [system.db.CDbCommand] Error in querying SQL: SHOW COLUMNS FROM `type`
+in /home/ori/www/eumk/yii/framework/gii/generators/model/ModelCode.php (139)
+in /home/ori/www/eumk/yii/framework/gii/generators/model/ModelCode.php (115)
+in /home/ori/www/eumk/yii/framework/gii/CCodeGenerator.php (155)
+2010/12/09 21:00:49 [error] [system.db.CDbCommand] Error in querying SQL: SHOW COLUMNS FROM `types`
+in /home/ori/www/eumk/yii/framework/gii/generators/model/ModelCode.php (139)
+in /home/ori/www/eumk/yii/framework/gii/generators/model/ModelCode.php (115)
+in /home/ori/www/eumk/yii/framework/gii/CCodeGenerator.php (155)
