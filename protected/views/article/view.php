@@ -16,8 +16,9 @@ $this->menu=array(
 <h1>Просмотр материала "<?php echo $model->content_id; ?>"</h1>
 
 <?php
-
+  echo "<hr width=90% size=1 color=black />";
   echo $model->text;
+  echo "<hr width=90% size=1 color=black />";
 
 ?>
 
