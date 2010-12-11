@@ -58,7 +58,7 @@ class Contents extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'articles' => array(self::HAS_MANY, 'Article', 'content_id'),
+			'articles' => array(self::HAS_ONE, 'Article', 'content_id', 'order' => 'position'),
 			'type' => array(self::BELONGS_TO, 'Type', 'type_id'),
 		);
 	}
@@ -70,10 +70,10 @@ class Contents extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'parent' => 'Parent',
-			'type_id' => 'Type',
-			'position' => 'Position',
-			'title' => 'Title',
+			'parent' => 'Родитель',
+			'type_id' => 'Тип',
+			'position' => 'Позиция',
+			'title' => 'Заглавие',
 		);
 	}
 

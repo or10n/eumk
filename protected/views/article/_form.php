@@ -28,7 +28,7 @@ tinyMCE.init({
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Поля отмеченные <span class="required">*</span> обязательны для заполнения.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -40,11 +40,19 @@ tinyMCE.init({
     $parents = CHtml::listData(Contents::model()->findAll(), 'id','parent');
     
     $list = $this->getTree($parents);
-
+    
     foreach(CHtml::listData(Contents::model()->findAll(), 'id','title') as $key=>$value){
       $list[$key] = $list[$key] . ' ' . $value;
     }
-		echo $form->dropDownList($model,'content_id', $list );
+    
+    // проверяем не используется ли заглавие 
+    $used = CHtml::listData(Article::model()->findAll(), 'content_id', 'content_id');
+    foreach ($list as $key=>$value) {
+      if(isset($used[$key]))
+        unset($list[$key]);
+    }
+    
+    echo $form->dropDownList($model,'content_id', $list );
 
 		?>
     

@@ -206,13 +206,13 @@ class ArticleController extends Controller
       global $list;
 
       if($parent != 0){
-      $dir = $pref . ' *';
+      $dir = $pref . ' »';
       $last[$parent] = 1;
 
       foreach($input as $key=>$value){
         if($value == $parent){
           $list[$key] = "$dir " . @$titles[$key];
-          $this->tree($input,$key,$pref. ' *',$list);
+          $this->tree($input,$key,$pref. ' »',$list);
         }
       }
       }     

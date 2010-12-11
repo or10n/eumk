@@ -10,6 +10,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Article</h1>
+<h1>Создать статью</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
