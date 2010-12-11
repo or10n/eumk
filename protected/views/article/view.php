@@ -13,13 +13,24 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Article #<?php echo $model->id; ?></h1>
+<h1>Просмотр материала "<?php echo $model->content_id; ?>"</h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
+<?php
+
+  echo $model->text;
+
+?>
+
+
+
+<?php /*
+  $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
 		'content_id',
 		'text',
 	),
-)); ?>
+));  
+ */
+?>

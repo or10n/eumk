@@ -1,9 +1,8 @@
 <script type="text/javascript">
 
 $(document).ready(function(){              
-    // вешаем на клик по элементу с id = example-1
+    $('#Contents_parent').load('/index.php?r=contents/dropdown&type=1');
     $('#Contents_type_id').change(function(){
-        // загрузку HTML кода из файла example.html
         $('#Contents_parent').load('/index.php?r=contents/dropdown&type='+$('#Contents_type_id').val());       
     }) 
 });
