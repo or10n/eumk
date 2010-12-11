@@ -36,7 +36,7 @@ tinyMCE.init({
 		<?php echo $form->labelEx($model,'content_id'); ?>
 
 		<?php
- 
+    
     $parents = CHtml::listData(Contents::model()->findAll(), 'id','parent');
     
     $list = $this->getTree($parents);
@@ -50,7 +50,7 @@ tinyMCE.init({
     foreach ($list as $key=>$value) {
       if(isset($used[$key]))
         unset($list[$key]);
-    }
+    }    
     
     echo $form->dropDownList($model,'content_id', $list );
 

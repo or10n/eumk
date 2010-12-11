@@ -27,7 +27,7 @@ class ContentsController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','dropdown'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -147,6 +147,36 @@ class ContentsController extends Controller
 			'model'=>$model,
 		));
 	}
+
+  /**
+   * Lists for dropdown box.
+   */
+  public function actionDropdown()
+  {
+    
+    $type = Yii::app()->request->getQuery('type', 1);
+    
+    $parents = CHtml::listData(Contents::model()->findAll(), 'id','parent');
+    $types = CHtml::listData(Contents::model()->findAll(), 'id','type_id');
+    
+    $list = $this->getTree($parents);
+    
+    foreach(CHtml::listData(Contents::model()->findAll(), 'id','title') as $key=>$value){
+      $list[$key] = $list[$key] . ' ' . $value;
+    }
+    
+    $used = CHtml::listData(Article::model()->findAll(), 'content_id', 'content_id');
+    foreach ($list as $key=>$value) {
+      if($types[$key] != $type)
+        unset($list[$key]);
+    }    
+    
+    $dataProvider=new CActiveDataProvider('Contents');
+    $this->renderPartial('dropdown',array(
+      'dataProvider'=>$dataProvider,
+      'list' => $list,
+    ));
+  }
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

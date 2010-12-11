@@ -23,7 +23,7 @@ $this->menu=array(
     
     foreach($list as $key=>$value){
       if($key != 1)
-        echo "<a href='http://eumk.local/index.php?r=contents/view&id=$key'>$value</a><br>";
+        echo "<a href='/index.php?r=contents/view&id=$key'>$value</a><br>";
       
     }
   

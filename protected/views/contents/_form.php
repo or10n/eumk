@@ -1,3 +1,14 @@
+<script type="text/javascript">
+
+$(document).ready(function(){              
+    // вешаем на клик по элементу с id = example-1
+    $('#Contents_type_id').change(function(){
+        // загрузку HTML кода из файла example.html
+        $('#Contents_parent').load('/index.php?r=contents/dropdown&type='+$('#Contents_type_id').val());       
+    }) 
+});
+</script>
+
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -9,11 +20,18 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
+
+  <div class="row" id="type">
+    <?php echo $form->labelEx($model,'type_id'); ?>
+    <?php echo $form->dropDownList($model,'type_id', CHtml::listData(Type::model()->findAll(), 'id','type') ); ?>
+    <?php echo $form->error($model,'type_id'); ?>
+  </div>
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'parent'); ?>
 		
 		<?php 
-		
+	   	
   		$parents = CHtml::listData(Contents::model()->findAll(), 'id','parent');
       
       $list = $this->getTree($parents);
@@ -21,17 +39,10 @@
       foreach(CHtml::listData(Contents::model()->findAll(), 'id','title') as $key=>$value){
         $list[$key] = $list[$key] . ' ' . $value;
       }
-      echo $form->dropDownList($model,'parent', $list ); 
-      
+      echo $form->dropDownList($model,'parent', $list );  
     ?>
     
 		<?php echo $form->error($model,'parent'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'type_id'); ?>
-		<?php echo $form->dropDownList($model,'type_id', CHtml::listData(Type::model()->findAll(), 'id','type') ); ?>
-		<?php echo $form->error($model,'type_id'); ?>
 	</div>
 
 	<div class="row">
