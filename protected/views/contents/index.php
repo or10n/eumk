@@ -22,7 +22,7 @@ $this->menu=array(
     }
     
     foreach($list as $key=>$value){
-      if($key != 1)
+      //if($key != 1)
         echo "<a href='/index.php?r=contents/view&id=$key'>$value</a><br>";
       
     }
