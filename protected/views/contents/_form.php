@@ -1,7 +1,7 @@
 <script type="text/javascript">
 
 $(document).ready(function(){              
-    $('#Contents_parent').load('/index.php?r=contents/dropdown&type=1');
+    $('#Contents_parent').load('/index.php?r=contents/dropdown&type=1'));
     $('#Contents_type_id').change(function(){
         $('#Contents_parent').load('/index.php?r=contents/dropdown&type='+$('#Contents_type_id').val());       
     }) 
