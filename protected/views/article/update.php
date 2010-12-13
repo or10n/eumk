@@ -1,18 +1,18 @@
 <?php
 $this->breadcrumbs=array(
-	'Articles'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'Статьи'=>array('index'),
+	Contents::model()->findByPk($model->content_id)->title=>array('view','id'=>$model->id),
+	'Редактирование',
 );
 
 $this->menu=array(
-	array('label'=>'List Article', 'url'=>array('index')),
-	array('label'=>'Create Article', 'url'=>array('create')),
-	array('label'=>'View Article', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Article', 'url'=>array('admin')),
+	array('label'=>'Просмотр списка', 'url'=>array('index')),
+	array('label'=>'Создать', 'url'=>array('create')),
+	array('label'=>'Просмотреть', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Управление', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Article <?php echo $model->id; ?></h1>
+<h1>Редактирование статьи "<?php echo Contents::model()->findByPk($model->content_id)->title; ?>"</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

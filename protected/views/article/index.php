@@ -1,16 +1,19 @@
 <?php
 $this->breadcrumbs=array(
-	'Articles',
+	'Статьи',
 );
 
 $this->menu=array(
-	array('label'=>'Create Article', 'url'=>array('create')),
-	array('label'=>'Manage Article', 'url'=>array('admin')),
+	array('label'=>'Добавить материал', 'url'=>array('create')),
+	array('label'=>'Править материалы', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Articles</h1>
+<h1>Статьи:</h1>
 
+
+  
+  
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
