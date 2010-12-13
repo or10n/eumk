@@ -23,8 +23,13 @@ $this->menu=array(
     
     foreach($list as $key=>$value){
       //if($key != 1)
-        echo "<a href='/index.php?r=contents/view&id=$key'>$value</a><br>";
-      
+        @$keyy = Article::model()->find('content_id=:content_id', array(':content_id' => $key))->id;
+        if($keyy){
+          echo "<a href='/index.php?r=article/view&id=" . $keyy . "'>$value</a><br>";
+        } else {
+          echo "$value<br>";          
+        }
+        unset ($keyy);
     }
   
 ?>
