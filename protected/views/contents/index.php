@@ -25,7 +25,7 @@ $this->menu=array(
       //if($key != 1)
         @$keyy = Article::model()->find('content_id=:content_id', array(':content_id' => $key))->id;
         if($keyy){
-          echo "<a href='/index.php?r=article/view&id=" . $keyy . "'>$value</a><br>";
+          echo "<a href='index.php?r=article/view&id=" . $keyy . "'>$value</a><br>";
         } else {
           echo "$value<br>";          
         }
