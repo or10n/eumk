@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Contents'=>array('index'),
-	'Create',
+	'Заголовки'=>array('index'),
+	'Создание',
 );
 
 $this->menu=array(
-	array('label'=>'List Contents', 'url'=>array('index')),
-	array('label'=>'Manage Contents', 'url'=>array('admin')),
+	array('label'=>'Оглавление', 'url'=>array('index')),
+	array('label'=>'Управление', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Contents</h1>
+<h1>Создать заголовок</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -1,15 +1,14 @@
 <?php
 $this->breadcrumbs=array(
-	'Contents'=>array('index'),
+	'Заголовки'=>array('index'),
 	$model->title=>array('view','id'=>$model->id),
-	'Update',
+	'Редактирование',
 );
 
 $this->menu=array(
-	array('label'=>'List Contents', 'url'=>array('index')),
-	array('label'=>'Create Contents', 'url'=>array('create')),
-	array('label'=>'View Contents', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Contents', 'url'=>array('admin')),
+	array('label'=>'Оглавление', 'url'=>array('index')),
+	array('label'=>'Добавить', 'url'=>array('create')),
+	array('label'=>'Управление', 'url'=>array('admin')),
 );
 ?>
 

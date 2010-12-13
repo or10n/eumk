@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Contents',
+	'Заголовки',
 );
 
 $this->menu=array(
-	array('label'=>'Create Contents', 'url'=>array('create')),
-	array('label'=>'Manage Contents', 'url'=>array('admin')),
+	array('label'=>'Добавить заголовок', 'url'=>array('create')),
+	array('label'=>'Управление', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Contents</h1>
+<h1>Оглавление</h1>
 
 <?php
 

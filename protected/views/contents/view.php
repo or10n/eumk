@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Contents'=>array('index'),
+	'Заголовки'=>array('index'),
 	$model->title,
 );
 
 $this->menu=array(
-	array('label'=>'List Contents', 'url'=>array('index')),
-	array('label'=>'Create Contents', 'url'=>array('create')),
-	array('label'=>'Update Contents', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Contents', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Contents', 'url'=>array('admin')),
+	array('label'=>'Оглавление', 'url'=>array('index')),
+	array('label'=>'Добавить', 'url'=>array('create')),
+	array('label'=>'Редактировать', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Удалить', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Управление', 'url'=>array('admin')),
 );
 ?>
 
