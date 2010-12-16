@@ -16,7 +16,6 @@
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
-
 <body>
 
 <div class="container" id="page">
@@ -56,3 +55,12 @@
 
 </body>
 </html>
+<!-- 
+ * @authors:
+ *    Alexander Randa <randa.alex@gmail.com>
+ *    Yaroslav Plahotya < >
+ *    Sergey Graholsky < >
+ *    Buldyk Evgeny < >
+ * @copyright Copyright &copy; 2010 BSUIR gr612501
+ * @version 0.8  
+-->
