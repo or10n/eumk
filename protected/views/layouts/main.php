@@ -56,11 +56,11 @@
 </body>
 </html>
 <!-- 
- * @authors:
- *    Alexander Randa <randa.alex@gmail.com>
+ * @authors
+ *    Alexander Randa <randa.alex(a)gmail.com>
  *    Yaroslav Plahotya < >
  *    Sergey Graholsky < >
- *    Buldyk Evgeny < >
- * @copyright Copyright &copy; 2010 BSUIR gr612501
+ *    Evgeny Buldyk < >
+ * @copyright 2010 BSUIR gr612501
  * @version 0.8  
 -->
