@@ -27,7 +27,11 @@ $this->menu=array(
         if($keyy){
           echo "<a href='index.php?r=article/view&id=" . $keyy . "'>$value</a><br>";
         } else {
-          echo "$value<br>";          
+          
+          
+          echo "<a href='index.php?r=article/create'>$value</a><br>";
+          
+                    
         }
         unset ($keyy);
     }

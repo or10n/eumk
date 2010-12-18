@@ -15,4 +15,4 @@ $this->menu=array(
 
 <h1>Редактирование статьи "<?php echo Contents::model()->findByPk($model->content_id)->title; ?>"</h1>
 
-<?php echo $this->renderPartial('_form2', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

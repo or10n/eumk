@@ -48,7 +48,7 @@ tinyMCE.init({
     // проверяем не используется ли заглавие 
     $used = CHtml::listData(Article::model()->findAll(), 'content_id', 'content_id');
     foreach ($list as $key=>$value) {
-      if(isset($used[$key]))
+      if(isset($used[$key]) && $model->isNewRecord)
         unset($list[$key]);
     }    
     

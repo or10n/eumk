@@ -2703,3 +2703,26 @@ Stack trace:
 #10 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
 #11 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
 #12 {main} REQUEST_URI=/index.php?r=article/view&content_id=7
+2010/12/16 22:55:22 [error] [exception.CException] exception 'CException' with message 'ArticleController cannot find the requested view "_form2".' in /home/ori/www/eumk/yii/framework/web/CController.php:842
+Stack trace:
+#0 /home/ori/www/eumk/htdocs/protected/views/article/update.php(18): CController->renderPartial('_form2', Array)
+#1 /home/ori/www/eumk/yii/framework/web/CBaseController.php(119): require('/home/ori/www/e...')
+#2 /home/ori/www/eumk/yii/framework/web/CBaseController.php(88): CBaseController->renderInternal('/home/ori/www/e...', Array, true)
+#3 /home/ori/www/eumk/yii/framework/web/CController.php(833): CBaseController->renderFile('/home/ori/www/e...', Array, true)
+#4 /home/ori/www/eumk/yii/framework/web/CController.php(746): CController->renderPartial('update', Array, true)
+#5 /home/ori/www/eumk/htdocs/protected/controllers/ArticleController.php(102): CController->render('update', Array)
+#6 [internal function]: ArticleController->actionUpdate('7')
+#7 /home/ori/www/eumk/yii/framework/web/actions/CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#8 /home/ori/www/eumk/yii/framework/web/CController.php(300): CInlineAction->run()
+#9 /home/ori/www/eumk/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /home/ori/www/eumk/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /home/ori/www/eumk/yii/framework/web/CController.php(1084): CFilter->filter(Object(CFilterChain))
+#12 /home/ori/www/eumk/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 /home/ori/www/eumk/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /home/ori/www/eumk/yii/framework/web/CController.php(283): CFilterChain->run()
+#15 /home/ori/www/eumk/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(324): CController->run('update')
+#17 /home/ori/www/eumk/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('article/update')
+#18 /home/ori/www/eumk/yii/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#19 /home/ori/www/eumk/htdocs/index.php(13): CApplication->run()
+#20 {main} REQUEST_URI=/index.php?r=article/update&id=7
