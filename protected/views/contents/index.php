@@ -12,6 +12,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Добавить заголовок', 'url'=>array('create')),
 	array('label'=>'Управление', 'url'=>array('admin')),
+	array('label'=>'Добавить статью','url'=>array('article/create'))
 );
 ?>
 
@@ -36,8 +37,8 @@ $this->menu=array(
             echo "<a href='index.php?r=article/view&id=" . $keyy . "'>$value</a><br>";
           } else {
             
+            //echo "$value<br>";
             echo "$value<br>";
-            //echo "<a href='index.php?r=article/create'>$value</a><br>";
             
                       
           }
