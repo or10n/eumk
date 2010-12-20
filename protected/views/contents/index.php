@@ -29,9 +29,6 @@ $this->menu=array(
       echo '<h1>Данный раздел пуст</h1>';
     } else {
       
-      
-      echo '<h1>Оглавление</h1>';
-      
       foreach($list as $key=>$value){
         if($parents["$key"] != 0){
           @$keyy = Article::model()->find('content_id=:content_id', array(':content_id' => $key))->id;
@@ -39,8 +36,8 @@ $this->menu=array(
             echo "<a href='index.php?r=article/view&id=" . $keyy . "'>$value</a><br>";
           } else {
             
-            
-            echo "<a href='index.php?r=article/create'>$value</a><br>";
+            echo "$value<br>";
+            //echo "<a href='index.php?r=article/create'>$value</a><br>";
             
                       
           }
