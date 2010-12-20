@@ -54,7 +54,7 @@ $this->menu=array(
 <?php
 
     //echo '<br><h1>Версия для печати</h1>';
-    switch ($titles) {
+    switch ($titles["$type_id"]) {
           case '1':
             echo '<br><br><a href="">Курс лекций в виде pdf</a>';  
             break;
