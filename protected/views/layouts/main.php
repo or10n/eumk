@@ -28,9 +28,13 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Оглавление', 'url'=>array('/contents')),
-				array('label'=>'Статьи', 'url'=>array('/article')),
-				array('label'=>'Разделы', 'url'=>array('/type')),
+				
+				array('label'=>'Лекции', 'url'=>array('/contents','type' => '1')),
+				array('label'=>'Лабораторные работы', 'url'=>array('/contents','type' => '2')),
+				array('label'=>'Практические работы', 'url'=>array('/contents','type' => '3')),        
+        array('label'=>'Контроль знаний', 'url'=>array('/contents','type' => '4')),
+
+  			array('label'=>'Разделы', 'url'=>array('/type')),
         
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)

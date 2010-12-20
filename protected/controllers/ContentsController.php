@@ -131,6 +131,7 @@ class ContentsController extends Controller
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
+    
 	}
 
 	/**
@@ -236,7 +237,7 @@ class ContentsController extends Controller
       global $list;
 
       if($parent != 0){
-      $dir = $pref . ' »';
+      $dir = $pref . '';
       $last[$parent] = 1;
 
       foreach($input as $key=>$value){

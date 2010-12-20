@@ -1,6 +1,12 @@
 <?php
+
+$type_id = $type = Yii::app()->request->getQuery('type', 1);
+$type_id = (int)$type_id; 
+
+$titles = CHtml::listData(Type::model()->findAll(),'id','type');
+
 $this->breadcrumbs=array(
-	'Заголовки',
+	$titles["$type_id"],
 );
 
 $this->menu=array(
@@ -9,33 +15,43 @@ $this->menu=array(
 );
 ?>
 
-<h1>Оглавление</h1>
-
 <?php
-
-    $parents = CHtml::listData(Contents::model()->findAll(), 'id','parent');
+        
+    $parents = CHtml::listData(Contents::model()->findAll('type_id = '.$type_id), 'id','parent');
     
     $list = $this->getTree($parents);
 
-    foreach(CHtml::listData(Contents::model()->findAll(), 'id','title') as $key=>$value){
+    foreach(CHtml::listData(Contents::model()->findAll('type_id = '.$type_id), 'id','title') as $key=>$value){
       $list[$key] = $list[$key] . ' ' . $value;
     }
     
-    foreach($list as $key=>$value){
-      //if($key != 1)
-        @$keyy = Article::model()->find('content_id=:content_id', array(':content_id' => $key))->id;
-        if($keyy){
-          echo "<a href='index.php?r=article/view&id=" . $keyy . "'>$value</a><br>";
-        } else {
-          
-          
-          echo "<a href='index.php?r=article/create'>$value</a><br>";
-          
-                    
+    if(!$list){
+      echo '<h1>Данный раздел пуст</h1>';
+    } else {
+      
+      
+      echo '<h1>Оглавление</h1>';
+      
+      foreach($list as $key=>$value){
+        if($parents["$key"] != 0){
+          @$keyy = Article::model()->find('content_id=:content_id', array(':content_id' => $key))->id;
+          if($keyy){
+            echo "<a href='index.php?r=article/view&id=" . $keyy . "'>$value</a><br>";
+          } else {
+            
+            
+            echo "<a href='index.php?r=article/create'>$value</a><br>";
+            
+                      
+          }
+          unset ($keyy);
         }
-        unset ($keyy);
-    }
-  
+      }
+    }  
+    
+    //echo '<br><h1>Версия для печати</h1>';
+    echo '<br><br><a href="">Курс лекций в виде pdf</a>';
+    
 ?>
 
 
