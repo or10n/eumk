@@ -53,29 +53,30 @@ $this->menu=array(
 
 <?php
 
+    if($list){
     //echo '<br><h1>Версия для печати</h1>';
-    switch ($titles["$type_id"]) {
-          case '1':
-            echo '<br><br><a href="">Курс лекций в виде pdf</a>';  
-            break;
-
-          case '2':
-            echo '<br><br><a href="">Курс лабораторных работ в виде pdf</a>';  
-            break;
-          
-          case '3':
-            echo '<br><br><a href="">Курс практических работ в виде pdf</a>';  
-            break;          
-          
-          case '4':
-            echo '<br><br><a href="">Контроль знаний в виде pdf</a>';  
-            break;
-                      
-          default:
-            echo '<br><br><a href="">Курс лекций в виде pdf</a>';
-            break;
+      switch ($type_id) {
+            case '1':
+              echo '<br><br><a href="">Курс лекций в виде pdf</a>';  
+              break;
+  
+            case '2':
+              echo '<br><br><a href="">Курс лабораторных работ в виде pdf</a>';  
+              break;
+            
+            case '3':
+              echo '<br><br><a href="">Курс практических работ в виде pdf</a>';  
+              break;          
+            
+            case '4':
+              echo '<br><br><a href="">Контроль знаний в виде pdf</a>';  
+              break;
+                        
+            default:
+              echo '<br><br><a href="">Курс лекций в виде pdf</a>';
+              break;
+      }
     }
-    
 
 ?>
 
