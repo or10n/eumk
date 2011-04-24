@@ -20,9 +20,9 @@ $this->pageTitle=Yii::app()->name;
 			</a></em>
 		</td>
 		<td width=25% align=center>
-			<em><a href="index.php?r=contents&type=3">
+			<em><a href="index.php?r=contents&type=2">
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/practice_gray.jpg" id="practice" width="220" height="270" border="0" onMouseOver="javascript:change_color('practice')" onMouseOut="javascript:change_gray('practice')">
-				<center>Практика</center>
+				<center>Лабораторные работы</center>
 			</a></em>
 		</td>
 		<td width=25% align=center>
