@@ -56,20 +56,15 @@ require('./_require/vars.php');
 		<tr> 
 			<td align="center" colspan="2">
 				<div id="mainmenu">
-						<!--b>Оглавление</b></li> | 
-						<a href="./Программа/index.htm">Программа</a> | 
-						<a href="./Теория/index.htm">Теория</a> | 
-						<a href="./Практика/index.htm">Практика</a> | 
-						<a href="./Контроль_знаний/index.htm">Контроль знаний</a> | 
-						<a href="./Об авторах/index.htm">Об авторах</a-->
 						<?php $this->widget('zii.widgets.CMenu',array(
 							'items'=>array(
 								array('label'=>'Home', 'url'=>array('/site/index')),				
+								array('label'=>'Программа дисциплины', 'url'=>array('/contents','type' => '5')),
 								array('label'=>'Лекции', 'url'=>array('/contents','type' => '1')),
 								array('label'=>'Лабораторные работы', 'url'=>array('/contents','type' => '2')),
 								array('label'=>'Практические работы', 'url'=>array('/contents','type' => '3')),        
 								array('label'=>'Контроль знаний', 'url'=>array('/contents','type' => '4')),
-								array('label'=>'Разделы', 'url'=>array('/type')),        
+								array('label'=>'Разделы', 'url'=>array('/type'), 'visible'=>!Yii::app()->user->isGuest),        
 								array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 								array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 							),

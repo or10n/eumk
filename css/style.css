@@ -161,6 +161,11 @@ table.links  a img {
 	vertical-align: center;
 }
 
+div#sidebar
+{
+	border: 1px solid black;
+}
+
 /* текстовые ссылки на разделы */
 #mainmenu {
 	font-family: Tahoma,Verdana,sans-serif;
