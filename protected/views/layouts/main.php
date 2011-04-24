@@ -63,8 +63,8 @@ require('./_require/vars.php');
 								array('label'=>'Лекции', 'url'=>array('/contents','type' => '1')),
 								array('label'=>'Лабораторные работы', 'url'=>array('/contents','type' => '2')),
 								//array('label'=>'Практические работы', 'url'=>array('/contents','type' => '3')),        
-								array('label'=>'Контроль знаний', 'url'=>'/index.php?r=article/view&id=39'),
-								array('label'=>'Разделы', 'url'=>array('/type'), 'visible'=>!Yii::app()->user->isGuest),        
+								array('label'=>'Контроль знаний', 'url'=>'index.php?r=article/view&id=39'),
+								array('label'=>'Админка', 'url'=>'index.php?r=article/view&id=40', 'visible'=>!Yii::app()->user->isGuest),        
 								array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 								array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 							),
