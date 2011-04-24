@@ -5,11 +5,13 @@ $type_id = (int)$type_id;
 
 $titles = CHtml::listData(Type::model()->findAll(),'id','type');
 
-$this->menu=array(
-	array('label'=>'Добавить заголовок', 'url'=>array('create')),
-	array('label'=>'Управление', 'url'=>array('admin')),
-	array('label'=>'Добавить статью','url'=>array('article/create'))
-);
+if(!Yii::app()->user->isGuest){
+	$this->menu=array(
+		array('label'=>'Добавить заголовок', 'url'=>array('create')),
+		array('label'=>'Управление', 'url'=>array('admin')),
+		array('label'=>'Добавить статью','url'=>array('article/create'))
+	);
+}
 
 ?>
 
@@ -62,23 +64,23 @@ $this->menu=array(
     if($list){
       switch ($type_id) {
             case '1':
-              echo '<a href=""><img src="/images/pdf.jpg">Курс лекций в виде pdf</a>';  
+              echo '<a href="/_files/МПСИП Программа.pdf"><img src="/images/pdf.jpg">Курс лекций в виде pdf</a>';  
               break;
   
             case '2':
-              echo '<a href=""><img src="/images/pdf.jpg">Курс лабораторных работ в виде pdf</a>';  
+              echo '<a href="/_files/МПСИП Лабораторные работы.pdf"><img src="/images/pdf.jpg">Курс лабораторных работ в виде pdf</a>';  
               break;
             
             case '3':
-              echo '<a href=""><img src="/images/pdf.jpg">Курс практических работ в виде pdf</a>';  
+              echo '<a href="/_files/МПСИП Практические работы.pdf"><img src="/images/pdf.jpg">Курс практических работ в виде pdf</a>';  
               break;          
             
             case '4':
-              echo '<a href=""><img src="/images/pdf.jpg">Контроль знаний в виде pdf</a>';  
+              echo '<a href="/_files/МПСИП Контроль знаний.pdf"><img src="/images/pdf.jpg">Контроль знаний в виде pdf</a>';  
               break;
             
             case '42':
-              echo '<a href=""><img src="/images/pdf.jpg">Учебная программа в виде pdf</a>';  
+              echo '<a href="/_files/МПСИП Учебная программа.pdf"><img src="/images/pdf.jpg">Учебная программа в виде pdf</a>';  
               break;
 			  
             default:

@@ -58,7 +58,7 @@ require('./_require/vars.php');
 				<div id="mainmenu">
 						<?php $this->widget('zii.widgets.CMenu',array(
 							'items'=>array(
-								array('label'=>'Home', 'url'=>array('/site/index')),				
+								array('label'=>'Главная', 'url'=>array('/site/index')),				
 								array('label'=>'Программа дисциплины', 'url'=>array('/contents','type' => '5')),
 								array('label'=>'Лекции', 'url'=>array('/contents','type' => '1')),
 								array('label'=>'Лабораторные работы', 'url'=>array('/contents','type' => '2')),
