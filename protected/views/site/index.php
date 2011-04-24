@@ -8,7 +8,7 @@ $this->pageTitle=Yii::app()->name;
 <table class="img_content" border="0" cellpadding="4" cellspacing="0">
 	<tr> 
 		<td width=25% align=center>
-			<em><a href="" target="_blank" title="Программа дисциплины (Откроется в новом окне)">
+			<em><a href="index.php?r=article/view&id=38" title="Программа дисциплины">
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/program_gray.jpg" id="program" width="220" height="270" border="0" onMouseOver="javascript:change_color('program')" onMouseOut="javascript:change_gray('program')">
 				<center>Программа дисциплины</center>	  
 			</a></em>
