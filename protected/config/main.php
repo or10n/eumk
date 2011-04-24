@@ -46,12 +46,12 @@ return array(
 		),
 		*/
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=eumk',
+			'connectionString' => 'mysql:host=172.30.0.1;dbname=eumk',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => 'eumk',
+			'password' => 'kmue',
 			'charset' => 'utf8',
-			'tablePrefix' => 'db1_',
+			'tablePrefix' => 'db2_',
 		),
 		// uncomment the following to use a MySQL database
 		/*

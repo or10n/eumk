@@ -29,22 +29,32 @@ $this->menu=array(
     if(!$list){
       echo '<h1>Данный раздел пуст</h1>';
     } else {
-      
+      echo('
+	  <center>
+	  <table width="60%" cellspacing="0" cellpadding="4" border="0" class="links">
+	  <tr><td>
+	  ');
       foreach($list as $key=>$value){
         if($parents["$key"] != 0){
           @$keyy = Article::model()->find('content_id=:content_id', array(':content_id' => $key))->id;
+		  /** /
+		  $num = substr_count($value, '»');
+		  $value = str_replace('»', null, $value);
+		  /**/
+		  if (stristr($value, '»') == FALSE) {echo('</td></tr><tr><td>');}
+		  
           if($keyy){
-            echo "<a href='index.php?r=article/view&id=" . $keyy . "'>$value</a><br>";
+            echo "<a href='index.php?r=article/view&id=" . $keyy . "' style=\"margin-left: ".(intval($num)*15)."px;\">$value</a><br>";
           } else {
-            
-            //echo "$value<br>";
-            echo "$value<br>";
-            
-                      
+			echo "$value<br>";          
           }
           unset ($keyy);
         }
       }
+	  echo('
+	  </td></tr>
+	  </table>
+	  </center>');
     }  
     
 ?>
@@ -52,6 +62,7 @@ $this->menu=array(
 <?php
 
     if($list){
+	echo('<center>');
     //echo '<br><h1>Версия для печати</h1>';
       switch ($type_id) {
             case '1':
@@ -75,6 +86,7 @@ $this->menu=array(
               break;
       }
     }
+	echo('</center>');
 
 ?>
 
