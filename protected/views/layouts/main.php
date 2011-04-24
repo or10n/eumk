@@ -59,11 +59,11 @@ require('./_require/vars.php');
 						<?php $this->widget('zii.widgets.CMenu',array(
 							'items'=>array(
 								array('label'=>'Главная', 'url'=>array('/site/index')),				
-								array('label'=>'Программа дисциплины', 'url'=>array('/contents','type' => '5')),
+								array('label'=>'Программа дисциплины', 'url'=>'index.php?r=article/view&id=38'),
 								array('label'=>'Лекции', 'url'=>array('/contents','type' => '1')),
 								array('label'=>'Лабораторные работы', 'url'=>array('/contents','type' => '2')),
-								array('label'=>'Практические работы', 'url'=>array('/contents','type' => '3')),        
-								array('label'=>'Контроль знаний', 'url'=>array('/contents','type' => '4')),
+								//array('label'=>'Практические работы', 'url'=>array('/contents','type' => '3')),        
+								array('label'=>'Контроль знаний', 'url'=>'/index.php?r=article/view&id=39'),
 								array('label'=>'Разделы', 'url'=>array('/type'), 'visible'=>!Yii::app()->user->isGuest),        
 								array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 								array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)

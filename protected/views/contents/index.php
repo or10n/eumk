@@ -64,23 +64,23 @@ if(!Yii::app()->user->isGuest){
     if($list){
       switch ($type_id) {
             case '1':
-              echo '<a href="/_files/МПСИП Программа.pdf"><img src="/images/pdf.jpg">Курс лекций в формате pdf</a>';  
+              echo '<a href="/_files/MPSIP Kurs lekcij.pdf"><img src="/images/pdf.jpg">Курс лекций в формате pdf</a>';  
               break;
   
             case '2':
-              echo '<a href="/_files/МПСИП Лабораторные работы.pdf"><img src="/images/pdf.jpg">Курс лабораторных работ в формате pdf</a>';  
+              echo '<a href="/_files/MPSIP Laboratornye raboty.pdf"><img src="/images/pdf.jpg">Курс лабораторных работ в формате pdf</a>';  
               break;
             
             case '3':
-              echo '<a href="/_files/МПСИП Практические работы.pdf"><img src="/images/pdf.jpg">Курс практических работ в формате pdf</a>';  
+              echo '<a href="/_files/MPSIP Prakticheskie raboty.pdf"><img src="/images/pdf.jpg">Курс практических работ в формате pdf</a>';  
               break;          
             
             case '4':
-              echo '<a href="/_files/МПСИП Контроль знаний.pdf"><img src="/images/pdf.jpg">Контроль знаний в формате pdf</a>';  
+              echo '<a href="/_files/MPSIP Kontrol znanij.pdf"><img src="/images/pdf.jpg">Контроль знаний в формате pdf</a>';  
               break;
             
             case '42':
-              echo '<a href="/_files/МПСИП Учебная программа.pdf"><img src="/images/pdf.jpg">Учебная программа в формате pdf</a>';  
+              echo '<a href="/_files/MPSIP Rabochaja programma.pdf"><img src="/images/pdf.jpg">Учебная программа в формате pdf</a>';  
               break;
 			  
             default:
